@@ -6,12 +6,12 @@ public class main {
         String myString = "yarn";
         System.out.println(myString);
 
-        double myNumber= 3.14;
+        double myNumber = 3.14;
         System.out.println(myNumber);
 
-//        int x = 5;
-//        System.out.println(x++);
-//        System.out.println(x);
+        int r = 5;
+        System.out.println(r++);
+        System.out.println(r);
 //
 //        int x = 5;
 //        System.out.println(++x);
@@ -36,5 +36,15 @@ public class main {
         b -= a;
         System.out.println(a);
         System.out.println(b);
+
+        int max = Integer.MAX_VALUE;
+        System.out.println(max);
+        max++;
+        System.out.println(max);
+        //max value is like a constant you can build in
+        //Integer is a wrapper class which is called int.
+
+        byte little = (byte)max;
+        System.out.println(little);
     }
 }
