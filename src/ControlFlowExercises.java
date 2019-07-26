@@ -20,9 +20,11 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //            i++;
 //        }
-//        for (int x = 0; x <= 100; x += 2);{
+//        int x = 0;
+//        do {
 //            System.out.println(x);
-//        }
+//            x += 2;
+//        } while (x <= 100);
 //        {
 //            int y = 100;
 //            do {
@@ -43,16 +45,10 @@ public class ControlFlowExercises {
             System.out.println("Here is your table!");
             System.out.printf(numTable + "%n");
             for (int i = 1; i <= stop; i++) {
-                double square = Math.pow(i, 2);
-                double cube = Math.pow(i, 3);
-                if (i < 10) {
-                    System.out.printf("%d\t\t| %.0f\t\t | %.0f%n", i, square, cube);
-                } else {
-                    System.out.printf("%d\t\t|%.0f\t |%.0f%n", i, square, cube);
-                }
+                    System.out.printf("%-8d| %-9d | %-8d%n", i, i*i, i*i*i);
             }
         } else {
-            System.out.println("So long. Farewell.");
+            System.out.println("So long, farewell, auf Wiedersehen, good night.");
         }
         boolean allTheGrades = true;
         do {
