@@ -68,7 +68,7 @@ public class ControlFlowExercises {
                 } else if ((grade >= 86) && (grade <= 87)) {
                     System.out.printf("Your grade is %d. You got an B+!%n", grade);
                 } else if ((grade >= 83) && (grade <= 85)) {
-                    System.out.printf("Your grade is %d. You got an B!%n", grade);
+                    System.out.printf("Your grade is %d. You got an B.%n", grade);
                 } else if ((grade >= 80) && (grade <= 82)) {
                     System.out.printf("Your grade is %d. You got an B-.%n", grade);
                 } else if ((grade >= 76) && (grade <= 79)) {
