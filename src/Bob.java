@@ -11,11 +11,14 @@ public class Bob {
                 System.out.println("Sure.");
             } else if (userInput.endsWith("!")) {
                 System.out.println("Whoa, chill out!");
-            } else if (userInput.equals("")) {
+            } else if (userInput.isEmpty()) {
                 System.out.println("Fine. Be that way!");
+            } else if (userInput.equalsIgnoreCase("Bye")) {
+                System.out.println("*Bob ignores you*");
+                break;
             } else {
                 System.out.println("Whatever. *hair flip*");
             }
-        } while (!userInput.equals("End"));
+        } while (true);
     }
 }
