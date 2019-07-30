@@ -61,10 +61,10 @@ public class MethodsExercises {
 
     public static void roll() {
         int sides = 10;
-        int die1 = (int) (Math.random() * sides) + 1;
-        int die2 = (int) (Math.random() * sides) + 1;
+        int die1 = (int) Math.ceil(Math.random() * sides);
+        int die2 = (int) Math.ceil(Math.random() * sides);
         System.out.println("1st die = " + die1);
-        System.out.println("2nd die =" + die2);
+        System.out.println("2nd die = " + die2);
 
     }
 }
