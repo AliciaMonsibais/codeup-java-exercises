@@ -16,7 +16,7 @@ public class ArraysExercises {
         peeps[2] = new Person("Brandon");
 //        Person[] people = {new Person("Anthony"), new Person("Nicole"), new Person("Brandon")};
 
-        Person shiny = new Person("Alex");
+        Person newPeep = new Person("Alex");
 
 //        for (Person person : peeps) {
 //            System.out.println(person.getName());
@@ -24,7 +24,7 @@ public class ArraysExercises {
 //        System.out.println("+---+---+---+");
 //        System.out.print("| ");
 
-        peeps = addPerson(peeps, shiny);
+        peeps = addPerson(peeps, newPeep);
 
         for (Person person : peeps) {
             System.out.println(person.getName());
