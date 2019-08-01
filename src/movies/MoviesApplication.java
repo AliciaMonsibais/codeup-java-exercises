@@ -5,7 +5,7 @@ import java.lang.reflect.Array;
 import util.Input;
 
 public class MoviesApplication {
-    //using Input method from Input.java
+    //using Input method from Input.java for YesNo Boolean
     static Input input = new Input();
     public static void main(String[] args) {
         boolean keepGoing;
@@ -13,7 +13,7 @@ public class MoviesApplication {
         //This class has a static method named findAll that will return an array of Movie objects. (from MoviesArray.java
         Movie[] movie = MoviesArray.findAll();
         do {
-            System.out.println("What would you like to do?/n" +
+            System.out.println("What would you like to do?\n" +
                     "0 - exit\n" +
                     "1 - view all movies \n" +
                     "2 - view movies in the animated category \n" +
@@ -22,6 +22,7 @@ public class MoviesApplication {
                     "5 - view movies in the scifi category \n" +
                     "6 - view movies in the musical category \n" +
                     "7 - view movies in the comedy category \n");
+//                    "8 - Add a movie");
 
             String userAnswer = sc.nextLine();
 
@@ -41,8 +42,10 @@ public class MoviesApplication {
                 System.out.println(displayCategory("musical"));
             } else if (userAnswer.equals("7")) {
                 System.out.println(displayCategory("comedy"));
+//            }else if (userAnswer.equals("8")) {
+//                addMovie();
             } else {
-                System.out.println("ಠ_ಠ That wasn't a valid entry. Try again.");
+                System.out.println("ಠ_ಠ That wasn't a valid entry.");
             }
             System.out.println("Would you like to keep going?");
             keepGoing = input.yesNo();
@@ -67,4 +70,17 @@ public class MoviesApplication {
         }
         return movies;
     }
+
+    //bonus
+//    public static void addMovie() {
+//        Movie[] movie = MoviesArray.findAll();
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("What is the title of the movie you would like to add?");
+//        String name - sc.nextLine();
+//        System.out.println("What is the category of your movie?");
+//        String category = sc.next();
+//        Movie[] newList = Arrays.copyOf(movie, movie.length + 1);
+//        newList [newList.length - 1] = new Movie (name, category);
+//        System.out.println(displayMovies(newList));
+//    }
 }

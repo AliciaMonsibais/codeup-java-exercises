@@ -1,11 +1,13 @@
+
 public class ServerNameGenerator {
     private static String[] adjectives = {"Sophisticated", "Insightful", "Meticulous", "Strategic", "Constructive", "Savvy", "Energetic", "Devoted", "Earnest", "Sagacious"};
 
     private static String[] nouns = {"Aardvark", "Chinchilla", "Parakeet", "Boar", "Porpoise", "Marten", "Wombat", "Platypus", "Chamois", "Fox"};
 
     private static String randomElement(String[] strings) {
-        int randoNum = (int) (Math.random() * strings.length);
-        return strings[randoNum];
+        int sng = (int) (Math.random() * strings.length);
+        return strings[sng];
+        //sng = Server Name Generator. It's like RNG.
     }
 
     public static String generator(String[] strings1, String[] strings2) {
