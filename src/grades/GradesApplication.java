@@ -12,7 +12,7 @@ public class GradesApplication {
 
         Student hermione = new Student("Hermione");
         hermione.addGrade(100);
-        hermione.addGrade(99);
+        hermione.addGrade(100);
         hermione.addGrade(100);
 
         Student luna = new Student("Luna");
@@ -34,6 +34,12 @@ public class GradesApplication {
         draco.addGrade(85);
         draco.addGrade(87);
         draco.addGrade(89);
+
+        students.put("hgranger", hermione);
+        students.put("llovegood", luna);
+        students.put("theharrypotter", harry);
+        students.put("ronweasley3", ron);
+        students.put("dmalfoy", draco);
     }
 
     private static void welcome() {
@@ -68,7 +74,7 @@ public class GradesApplication {
 
             System.out.println("Would you like to see another student?");
             keepGoing = input.yesNo();
-            System.out.println();
+            System.out.println("Goodbye, and have a wonderful day!");
         } while (keepGoing);
     }
 }
