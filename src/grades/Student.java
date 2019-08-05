@@ -38,5 +38,4 @@ public class Student {
         alicia.addGrade(97);
         System.out.println(alicia.getGradeAverage());
     }
-
 }

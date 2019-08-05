@@ -4,12 +4,16 @@ import util.Input;
 
 import java.util.HashMap;
 import java.util.Map;
-
+//Create a class named GradesApplication with a main method.
 public class GradesApplication {
+    //Inside the main method, create a HashMap named students.
     static Map<String, Student> students;
-    private static void init() {
+
+//    It should have keys that are strings that represent GitHub usernames, and values that are Student objects.
+    private static void create() {
         students = new HashMap<>();
 
+//        Create at least 4 student objects with at least 3 grades each, and add them to the map.
         Student hermione = new Student("Hermione");
         hermione.addGrade(100);
         hermione.addGrade(100);
@@ -40,9 +44,13 @@ public class GradesApplication {
         students.put("theharrypotter", harry);
         students.put("ronweasley3", ron);
         students.put("dmalfoy", draco);
+
     }
 
-    private static void welcome() {
+//    Create the command line interface
+    private static void greeting() {
+
+//        Print the list of GitHub usernames out to the console, and ask the user which student they would like to see more information about. The user should enter a GitHub username (i.e. one of the keys in your map).
         System.out.printf("Welcome!\n");
         String usernames = "|";
         for (String key : students.keySet())
@@ -51,19 +59,21 @@ public class GradesApplication {
         System.out.println();
     }
     private static void outputStudentRecord(String key) {
+//        If the given username does exist, display information about that student, including their name and their grades.
         if (students.containsKey(key)) {
             System.out.printf("Name: %s - Github Username: %s%n", students.get(key).getName(), key);
-            System.out.printf("Current Average: %.2f%n%n", students.get(key).getGradeAverage());
+            System.out.printf("Current Average: %.0f%n%n", students.get(key).getGradeAverage());
         } else {
+//            If the given input does not match up with a key in your map, tell the user that no users with that username were found.
             System.out.printf("Sorry, no student was found with \"%s.\"%n", key);
         }
     }
 
     public static void main(String[] args) {
         Input input = new Input();
-        init();
-        welcome();
-        boolean keepGoing = true;
+        create();
+        greeting();
+        boolean keepGoing;
 
         do {
             System.out.println("What student would you like to see more information on?");
@@ -72,9 +82,10 @@ public class GradesApplication {
 
             outputStudentRecord(studentChoice);
 
+//            After the information is displayed, the application should ask the user if they want to continue, and keep running so long as the answer is yes.
             System.out.println("Would you like to see another student?");
             keepGoing = input.yesNo();
-            System.out.println("Goodbye, and have a wonderful day!");
         } while (keepGoing);
+        System.out.println("Goodbye, and have a wonderful day!");
     }
 }
