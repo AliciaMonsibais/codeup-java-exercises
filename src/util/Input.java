@@ -24,7 +24,7 @@ public class Input {
         int num = getInt();
 
         if(num < min || num > max){
-            System.out.println("Error outside of the boundaries");
+            System.out.println("Error: outside of the boundaries.");
             return getInt(min, max);
         }
 
@@ -32,29 +32,24 @@ public class Input {
     }
 
     public int getInt(){
-
         int number;
-
         try{
             number = Integer.valueOf(getString("Give me a number: "));
         } catch (NumberFormatException myException){
-            System.out.println("Input is not valid, make sure it's a number");
+            System.out.println("Invalid input. Make sure it's a number");
             return getInt();
         }
-
         return number;
     }
 
     public double getDouble(){
         double number;
-
-        try{
+        try {
             number = Double.valueOf(getString("Give me a decimal: "));
         } catch (NumberFormatException myException){
-            System.out.println("Input is not valid, make sure it's a decimal");
+            System.out.println("That's not a decimal. ಠ_ಠ");
             return getDouble();
         }
-
         return number;
     }
 
@@ -62,7 +57,7 @@ public class Input {
         double num = getDouble();
 
         if(num < min || num > max){
-            System.out.println("Error outside of the boundaries");
+            System.out.println("Error: outside of the boundaries.");
             return getDouble(min, max);
         }
 
