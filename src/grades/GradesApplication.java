@@ -64,7 +64,7 @@ public class GradesApplication {
             System.out.printf("Current Average: %.0f%n%n", students.get(key).getGradeAverage());
         } else {
 //            If the given input does not match up with a key in your map, tell the user that no users with that username were found.
-            System.out.printf("Sorry, no student was found with \"%s.\"%n", key);
+            System.out.printf("Sorry, no student was found with \"%s\".%n", key);
         }
     }
 
@@ -75,11 +75,9 @@ public class GradesApplication {
         boolean keepGoing;
 
         do {
-            System.out.println("What student would you like to see more information on?");
-            String studentChoice = input.getString();
-            System.out.println();
+            String studentChosen = input.getString("What student would you like to see more information on?");
 
-            studentInfo(studentChoice);
+            studentInfo(studentChosen);
 
             System.out.println("Would you like to see another student?");
             keepGoing = input.yesNo();
