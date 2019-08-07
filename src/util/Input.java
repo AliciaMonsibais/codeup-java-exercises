@@ -35,8 +35,9 @@ public class Input {
         int number;
         try{
             number = Integer.valueOf(getString("Give me a number: "));
-        } catch (NumberFormatException myException){
+        } catch (NumberFormatException e){
             System.out.println("Invalid input. Make sure it's a number");
+            e.printStackTrace();
             return getInt();
         }
         return number;
@@ -46,8 +47,9 @@ public class Input {
         double number;
         try {
             number = Double.valueOf(getString("Give me a decimal: "));
-        } catch (NumberFormatException myException){
+        } catch (NumberFormatException e){
             System.out.println("That's not a decimal. ಠ_ಠ");
+            e.printStackTrace();
             return getDouble();
         }
         return number;
