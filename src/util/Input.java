@@ -46,9 +46,9 @@ public class Input {
     public double getDouble(){
         double number;
         try {
-            number = Double.valueOf(getString("Give me a decimal: "));
+            number = Double.valueOf(getString("Give me a number: "));
         } catch (NumberFormatException e){
-            System.out.println("That's not a decimal. ಠ_ಠ");
+            System.out.println("That's not a number. ಠ_ಠ");
             e.printStackTrace();
             return getDouble();
         }
